@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Ideal Tech</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Boost Your Career</string>
+    <string name="slide_1_desc">Learn from our experts to find a real boost in your career</string>
+
+    <string name="slide_2_title1">Learn from the best</string>
+    <string name="slide_2_title2">Study Materials</string>
+    <string name="slide_2_desc">We provide thoroughly researched study material </string>
+
+    <string name="slide_3_title">Get Custom notification Alerts</string>
+    <string name="slide_3_desc">You would be informed about every recent updates from our experts</string>
+
+    <string name="slide_4_title">Complete your profile</string>
+    <string name="slide_4_desc">Always update your profile to current status so we can cater your needs</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+</resources>

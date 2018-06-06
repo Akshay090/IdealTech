@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "419252935678",
+    "firebase_url": "https://idealtech-b8a92.firebaseio.com",
+    "project_id": "idealtech-b8a92",
+    "storage_bucket": "idealtech-b8a92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419252935678:android:5ed1ace670f8f1b7",
+        "android_client_info": {
+          "package_name": "com.theandroidprojects.idealtech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419252935678-ss0alviar7qtjt772solgb60nk34otee.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theandroidprojects.idealtech",
+            "certificate_hash": "34817ce8af7b0ad7df9e59f1966d5139a0c505b4"
+          }
+        },
+        {
+          "client_id": "419252935678-9lme1op2i6dh2eoai4dh21eafpn2c7fi.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "419252935678-9lme1op2i6dh2eoai4dh21eafpn2c7fi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0td3VjHqQZDE4bjZfFoRptKkFR65EP4Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419252935678-9lme1op2i6dh2eoai4dh21eafpn2c7fi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

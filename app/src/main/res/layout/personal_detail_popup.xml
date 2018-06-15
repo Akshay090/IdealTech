@@ -1,0 +1,148 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="2dp"
+    android:id="@+id/personal_d_form">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/pd_name_main"
+            >
+            <EditText
+                android:id="@+id/pd_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NAME"
+                android:shadowColor="@color/colorPrimary"
+                android:inputType="text"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+
+            <Spinner
+                 android:id="@+id/genderSpinner"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                 android:spinnerMode="dialog"
+                android:background="@null"
+                app:layout_constraintTop_toBottomOf="@+id/pd_name_main"/>
+
+
+            <Spinner
+                android:id="@+id/martialSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:spinnerMode="dialog"
+                android:background="@null"
+                app:layout_constraintTop_toBottomOf="@+id/genderSpinner"/>
+
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pd_whatsApp_main"
+                app:layout_constraintTop_toBottomOf="@+id/martialSpinner">
+
+            <EditText
+                android:id="@+id/pd_whatsApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:hint="WhatsApp no"
+                android:inputType="number"
+                android:maxLength="10" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/add_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Permanent Address"
+            app:layout_constraintTop_toBottomOf="@+id/pd_whatsApp_main"/>
+
+        <include
+            android:id="@+id/pd_address_per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/address_layout"
+            app:layout_constraintTop_toBottomOf="@+id/add_txt"/>
+
+
+        <TextView
+            android:id="@+id/addcurr_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Address"
+            app:layout_constraintTop_toBottomOf="@+id/pd_address_per"/>
+
+        <CheckBox
+            android:id="@+id/chk_bx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tick if same as Above"
+            app:layout_constraintTop_toBottomOf="@+id/addcurr_txt"/>
+
+        <include
+            android:id="@+id/pd_address_cur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/address_layout_current"
+            app:layout_constraintTop_toBottomOf="@+id/chk_bx"/>
+
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Date of Birth"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/pd_address_cur"
+            />
+
+
+        <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:id="@+id/languages_known"
+                app:layout_constraintTop_toBottomOf="@+id/date">
+
+                <EditText
+                android:id="@+id/languages_known_edTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Languages Known"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:elevation="4dp"
+            android:text="Submit"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/languages_known"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+

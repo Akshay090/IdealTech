@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:contentPadding="10dp"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d6f9f5">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/employment_d_bar"
+                android:layout_width="match_parent"
+                android:layout_height="35sp"
+                android:background="#c6ecbc"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:text="Education Details"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_editor_absoluteY="5dp"
+                    card_view:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="5dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/edit_pen"
+                    android:tint="#00ff00"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_editor_absoluteY="5dp"
+                    card_view:ignore="MissingConstraints" />
+
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/ed_view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#00ffe1"
+                app:layout_constraintTop_toBottomOf="@+id/employment_d_bar" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/ed_view"
+                android:id="@+id/college_name"
+                android:text="XYZ Institute of Tech"
+                android:textSize="17sp"
+                android:layout_margin="4dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/college_name"
+                android:id="@+id/course_name"
+                android:text="course name"
+                android:textSize="17sp"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/course_name"
+                android:id="@+id/branch"
+                android:text="Branch"
+                android:textSize="17sp"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/branch"
+                android:id="@+id/semester"
+                android:text="Semester"
+                android:textSize="17sp"
+                android:layout_margin="4dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

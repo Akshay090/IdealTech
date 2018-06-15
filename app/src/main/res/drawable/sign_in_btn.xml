@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="#73e79a"
+    tools:targetApi="lollipop">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#80deea" />
+            <corners android:radius="4dip" />
+        </shape>
+    </item>
+
+   <!--
+        TO ADD GRADIENT TO BUTTON
+   <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:endColor="#80deea"
+                android:startColor="@color/colorPrimary"
+                android:type="linear" />
+            <corners android:radius="8dip" />
+        </shape>
+    </item>
+-->
+</ripple>
+
+
+

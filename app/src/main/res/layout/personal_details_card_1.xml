@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:contentPadding="10dp"
+        >
+
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d6f9f5">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/personal_d_bar"
+                android:layout_width="match_parent"
+                android:layout_height="35sp"
+                android:background="#c6ecbc"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:text="Personal Details"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_editor_absoluteY="5dp"
+                    card_view:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="5dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/edit_pen"
+                    android:tint="#00ff00"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_editor_absoluteY="5dp"
+                    card_view:ignore="MissingConstraints" />
+
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/pd_view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/personal_d_bar"
+                android:background="#00ffe1"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/pd_view"
+                android:id="@+id/cal_layout_parent"
+                android:layout_margin="4dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/calendar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/cal_img"/>
+
+
+                <TextView
+                    android:id="@+id/cal_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Date of Birth :"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cal_img"
+                    app:layout_constraintLeft_toRightOf="@+id/cal_img" />
+
+                <TextView
+                    android:id="@+id/cal_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="08 Jun, 1998"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cal_1"
+                    app:layout_constraintLeft_toRightOf="@+id/cal_1" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/cal_layout_parent"
+                android:id="@+id/gender_parent_layout"
+                android:layout_margin="4dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/gender"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/gender_img"/>
+
+
+                <TextView
+                    android:id="@+id/gender_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Gender :"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/gender_img"
+                    app:layout_constraintLeft_toRightOf="@+id/gender_img" />
+
+                <TextView
+                    android:id="@+id/gender_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/gender_1"
+                    app:layout_constraintLeft_toRightOf="@+id/gender_1" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/gender_parent_layout"
+                android:id="@+id/location_parent_layout"
+                android:layout_margin="4dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/location"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/loc_img"/>
+
+
+                <TextView
+                    android:id="@+id/from_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="From "
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/location_parent_layout"
+                    app:layout_constraintLeft_toRightOf="@+id/loc_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="City, State"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/location_parent_layout"
+                    app:layout_constraintLeft_toRightOf="@+id/from_1"
+                    app:layout_constraintStart_toEndOf="@+id/from_1" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/location_parent_layout"
+                android:id="@+id/living_parent_layout"
+                android:layout_margin="4dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/compass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/live_img"/>
+
+
+                <TextView
+                    android:id="@+id/living_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Living in "
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/living_parent_layout"
+                    app:layout_constraintLeft_toRightOf="@+id/live_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="City, State"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/living_parent_layout"
+                    app:layout_constraintLeft_toRightOf="@+id/living_1"
+                    app:layout_constraintStart_toEndOf="@+id/living_1" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/living_parent_layout"
+                android:id="@+id/whatsapp_parent_layout"
+                android:layout_margin="4dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/whatsapp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/whatsapp_img"/>
+
+
+                <TextView
+                    android:id="@+id/whatsapp_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="WhatsApp no is "
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/whatsapp_parent_layout"
+                    app:layout_constraintLeft_toRightOf="@+id/whatsapp_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="0123456789"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/whatsapp_parent_layout"
+                    app:layout_constraintLeft_toRightOf="@+id/whatsapp_1"
+                    app:layout_constraintStart_toEndOf="@+id/whatsapp_1" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/whatsapp_parent_layout"
+                android:id="@+id/language_parent_layout"
+                android:layout_margin="6dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/translator"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/language_img"/>
+
+
+                <TextView
+                    android:id="@+id/language_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Languages known "
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/language_parent_layout"
+                    app:layout_constraintLeft_toRightOf="@+id/language_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="English, Hindi"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/language_parent_layout"
+                    app:layout_constraintLeft_toRightOf="@+id/language_img"
+                    app:layout_constraintStart_toEndOf="@+id/language_1" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

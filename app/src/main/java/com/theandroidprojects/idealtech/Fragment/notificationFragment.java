@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 
 import com.theandroidprojects.idealtech.R;
 
-public class notificationFragment extends Fragment {
+public class NotificationFragment extends Fragment {
 
 
-    public notificationFragment() {
+    public NotificationFragment() {
         // Required empty public constructor
     }
 

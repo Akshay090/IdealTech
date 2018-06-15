@@ -24,25 +24,15 @@
         <!-- Main activity -->
         <activity
             android:name=".Activities.MainActivity"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".Activities.WelcomeActivity"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
-            android:name=".Activities.LogIn"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".Activities.SignUp"
-            android:label="@string/app_name" >
-        </activity>
-
-
+            android:name=".Activities.LoginRegister"
+            android:label="@string/app_name" />
+        <activity android:name=".Activities.ProfileEditActivity" />
+        <activity android:name=".Activities.to_debug"></activity>
     </application>
 
 </manifest>

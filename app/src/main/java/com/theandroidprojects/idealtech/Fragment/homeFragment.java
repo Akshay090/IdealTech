@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 
 import com.theandroidprojects.idealtech.R;
 
-public class homeFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
-    public homeFragment() {
+    public HomeFragment() {
         // Required empty public constructor
     }
 
@@ -21,5 +21,8 @@ public class homeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.home_fragment, container, false);
+
+
+
     }
 }

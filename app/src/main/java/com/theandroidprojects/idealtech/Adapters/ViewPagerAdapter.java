@@ -27,4 +27,13 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         mFragmentList.add(fragment);
     }
 
+//below are my trials
+
+
+
+    public void replaceFragment(int position, Fragment fragment) {
+        mFragmentList.set( position, fragment );
+    }
+
+
 }

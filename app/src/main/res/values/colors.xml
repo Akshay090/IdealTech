@@ -36,4 +36,11 @@
         <item>@color/dot_dark_screen3</item>
         <item>@color/dot_dark_screen4</item>
     </array>
+
+
+    <color name="colorEditTextHint">#767272</color>
+    <color name="colorBlack">#000</color>
+
+    <color name="colorForToolBar">#556efc</color>
+
 </resources>

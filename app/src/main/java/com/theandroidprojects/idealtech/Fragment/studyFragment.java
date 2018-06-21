@@ -1,13 +1,9 @@
 package com.theandroidprojects.idealtech.Fragment;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,8 +16,6 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.theandroidprojects.idealtech.Activities.to_debug;
-import com.theandroidprojects.idealtech.Adapters.ViewPagerAdapter;
 import com.theandroidprojects.idealtech.Common.Common;
 import com.theandroidprojects.idealtech.R;
 import com.theandroidprojects.idealtech.ViewHolders.CategoryViewHolder;
@@ -114,7 +108,7 @@ public class StudyFragment extends Fragment {
 
             @Override
             public CategoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_layout, parent, false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_view_h_layout, parent, false);
                 return new CategoryViewHolder(view);
             }
 

@@ -7,5 +7,7 @@ public class Common {
 
     public static final String subCategory_tbl = "subCategory";
 
+    public static final String Job_tbl = "Job";
+
 
 }

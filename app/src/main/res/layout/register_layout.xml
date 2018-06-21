@@ -13,7 +13,6 @@
     android:orientation="vertical">
 
     <android.support.design.widget.TextInputLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
@@ -22,7 +21,7 @@
             android:id="@+id/register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="EMAIL"
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:shadowColor="@color/colorPrimary"
@@ -51,8 +50,6 @@
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:inputType="textPassword"
-            android:imeOptions="actionDone"
-
             />
     </android.support.design.widget.TextInputLayout>
 
@@ -95,6 +92,7 @@
             android:layout_marginRight="3dp"
             android:imeOptions="actionNext"
             android:inputType="phone"
+            android:maxLength="10"
             />
 
 

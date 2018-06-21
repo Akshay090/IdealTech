@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools">
 
 
-
-
-
     <android.support.v7.widget.CardView
-        android:id="@+id/card_view_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
         card_view:cardCornerRadius="4dp"
         card_view:contentPadding="10dp"
+        android:elevation="8dp"
         >
-
-
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -47,6 +41,7 @@
                     card_view:ignore="MissingConstraints" />
 
                 <ImageView
+                    android:id="@+id/editPenInPDFilled"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="end"
@@ -178,6 +173,7 @@
                     app:layout_constraintLeft_toRightOf="@+id/loc_img" />
 
                 <TextView
+                    android:id="@+id/from_city_state"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
@@ -221,6 +217,7 @@
                     app:layout_constraintLeft_toRightOf="@+id/live_img" />
 
                 <TextView
+                    android:id="@+id/Living_city_state"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
@@ -264,6 +261,7 @@
                     app:layout_constraintLeft_toRightOf="@+id/whatsapp_img" />
 
                 <TextView
+                    android:id="@+id/WhatsApp_no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
@@ -307,6 +305,7 @@
                     app:layout_constraintLeft_toRightOf="@+id/language_img" />
 
                 <TextView
+                    android:id="@+id/Languages_set"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"

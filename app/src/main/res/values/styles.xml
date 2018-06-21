@@ -22,4 +22,14 @@
         <item name="colorPrimaryDark">#FFD81B60</item>
     </style>
 
+
+    <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
+        <item name="android:buttonStyle">
+            @style/Widget.AppCompat.Button.Borderless.Colored
+        </item>
+
+        <item name="colorControlHighlight">#80deea</item>
+        <item name="colorAccent">#5c6bc0</item>
+    </style>
+
 </resources>

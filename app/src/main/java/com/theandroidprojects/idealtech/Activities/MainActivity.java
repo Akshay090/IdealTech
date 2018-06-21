@@ -1,5 +1,6 @@
 package com.theandroidprojects.idealtech.Activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -152,7 +153,9 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.navigation_profile:
 
-                        replaceFragment(profileFragment, currentFragment);
+                        Intent intent = new Intent(MainActivity.this,ProfileEditActivity.class);
+                        MainActivity.this.startActivity(intent);
+                        
                         return true;
 
                     default:

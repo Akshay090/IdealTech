@@ -16,7 +16,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -29,10 +29,10 @@
                 app:civ_border_width="2dp" />
 
             <LinearLayout
+                android:id="@+id/ProfilePgLL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/ProfilePgLL">
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"

@@ -156,7 +156,7 @@ public class LoginRegister extends Activity {
         final ProgressDialog mRegProgress;
 
 
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        AlertDialog.Builder alert = new AlertDialog.Builder(LoginRegister.this);
         alert.setTitle("REGISTER");
         alert.setMessage("PLEASE USE EMAIL TO REGISTER");
         // this is set the view from XML inside AlertDialog
@@ -183,6 +183,7 @@ public class LoginRegister extends Activity {
                // Toast.makeText(getBaseContext(), "email: " + emailData
                 //                + " pass: " + passData + " name_FB: " + nameData + " phone: " + phoneData
                 //        , Toast.LENGTH_SHORT).show();
+
 
                 if (TextUtils.isEmpty(emailData)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
@@ -278,7 +279,7 @@ public class LoginRegister extends Activity {
 
     private void RegisterFirebaseAndProgressBar(String emailData, String passData, String nameData, String phoneData) {
 
-        ProgressDialog = new ProgressDialog(this);
+        ProgressDialog = new ProgressDialog(LoginRegister.this);
 
         // Firebase Auth
 
@@ -318,8 +319,8 @@ public class LoginRegister extends Activity {
 
                     //String device_token = FirebaseInstanceId.getInstance().getToken();
 
-                    HashMap<String, String> userMap = new HashMap<>();
-                    userMap.put("name_FB", nameData);
+                    HashMap<String, Object> userMap = new HashMap<>();
+                    userMap.put("name", nameData);
                     userMap.put("phone", phoneData);
 
 
@@ -332,7 +333,7 @@ public class LoginRegister extends Activity {
                                 ProgressDialog.dismiss();
 
                                 Intent mainIntent = new Intent(LoginRegister.this, MainActivity.class);
-                                mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                               // mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(mainIntent);
                                 finish();
 
@@ -345,7 +346,8 @@ public class LoginRegister extends Activity {
                 } else {
 
                     ProgressDialog.hide();
-                    Toast.makeText(LoginRegister.this, "Cannot Sign in. Please check the form and try again.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginRegister.this, "Cannot Sign in. Please check the form and try again.",
+                            Toast.LENGTH_LONG).show();
 
                 }
 
@@ -385,7 +387,7 @@ public class LoginRegister extends Activity {
                     ProgressDialog.dismiss();
 
                             Intent mainIntent = new Intent(LoginRegister.this, MainActivity.class);
-                            mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                           // mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(mainIntent);
                             finish();
 

@@ -25,12 +25,7 @@
         android:src="@drawable/logo"
         android:tint="@android:color/white" />
 
-
-
-
-
-
-    </LinearLayout>
+</LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,14 +36,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <Button
                 android:id="@+id/signin_btn"
                 android:layout_marginRight="4dp"
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/sign_in_btn"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="45dp"
                 android:layout_weight="1"
                 android:layout_gravity="center"
@@ -62,7 +58,7 @@
                 android:id="@+id/register_btn"
                 android:layout_marginRight="8dp"
                 android:layout_marginLeft="4dp"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="45dp"
                 android:layout_weight="1"
                 android:onClick="RegisterBtnClicked"

@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.os.Handler;
 
 
-
+import com.google.firebase.auth.FirebaseAuth;
 import com.theandroidprojects.idealtech.R;
 
 public class Splash_Screen extends Activity {
     private static final int SPLASH_DISPLAY_TIME = 3000; // splash screen delay time
+
+    private FirebaseAuth mAuth;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

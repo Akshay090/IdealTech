@@ -2,7 +2,7 @@ package com.theandroidprojects.idealtech.model;
 
 public class subCategory {
 
-    private String catID, durations, questions, subName, date;
+    private String catID, duration, questions, subName, date;
 
     public subCategory() {
     }
@@ -10,7 +10,7 @@ public class subCategory {
 
     public subCategory(String catID, String durations, String questions, String subName, String date) {
         this.catID = catID;
-        this.durations = durations;
+        this.duration = durations;
         this.questions = questions;
         this.subName = subName;
         this.date = date;
@@ -32,12 +32,12 @@ public class subCategory {
         this.catID = catID;
     }
 
-    public String getDurations() {
-        return durations;
+    public String getDuration() {
+        return duration;
     }
 
-    public void setDurations(String durations) {
-        this.durations = durations;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
     public String getQuestions() {

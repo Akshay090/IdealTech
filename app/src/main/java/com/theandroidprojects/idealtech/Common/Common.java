@@ -9,5 +9,7 @@ public class Common {
 
     public static final String Job_tbl = "Job";
 
+    public static final String MCQ_tbl = "MCQ";
+
 
 }

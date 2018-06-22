@@ -3,12 +3,12 @@ package com.theandroidprojects.idealtech.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -86,22 +86,29 @@ public class SubCategoryFragment extends Fragment {
             protected void onBindViewHolder(@NonNull subCategoryViewHolder holder,
                                             final int position, @NonNull final subCategory model) {
                 holder.setSubName(model.getSubName());
+                holder.setSubDate(model.getDate());
+                holder.setSubQuestions(model.getQuestions());
+                holder.setSubDuration(model.getDuration());
+
                 Toast.makeText(getActivity(), "itsMname"+model.getSubName(), Toast.LENGTH_SHORT).show();
-               /* holder.mView.setOnClickListener(new View.OnClickListener() {
+
+                holder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         final String url = subCategoryAdapter.getRef(position).getKey();
                         Bundle bundle = new Bundle();
-                        bundle.putString("categoryId",url);
+                        bundle.putString("SUB_CATEGORY_ID",url);
+
                         AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                        SubCategoryFragment SubCategoryFragment = new SubCategoryFragment();
-                        SubCategoryFragment.setArguments(bundle);
+
+                        MCQFragment MCQFrag = new MCQFragment();
+                        MCQFrag.setArguments(bundle);
                         activity.getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.view_pager, SubCategoryFragment).addToBackStack(null).commit();
+                        .replace(R.id.fragment_subStudy, MCQFrag).addToBackStack(null).commit();
                     }
 
                 });
-                */
+
 
 
             }

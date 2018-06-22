@@ -88,6 +88,7 @@ public class StudyFragment extends Fragment {
                         bundle.putString("CATEGORY_ID",url);
 
                         AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
                         SubCategoryFragment subCategoryFragment = new SubCategoryFragment();
                         subCategoryFragment.setArguments(bundle);
 

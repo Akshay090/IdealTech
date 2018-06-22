@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this,ProfileEditActivity.class);
                         MainActivity.this.startActivity(intent);
                         overridePendingTransition( R.anim.slide_in_up, R.anim.slide_out_up );
-                        
+                        //used for animation in profile page
                         return true;
 
                     default:

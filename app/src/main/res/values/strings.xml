@@ -28,4 +28,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us_para1">Ideal HR Contrivance is a top Staffing ,Consultancy, Outsourcing , Event Management ,Training and Development firm in India.It offers simple and cost-effective services to its clients in all sectors, and has a rich experience in industries such as Technology, Manufacturing ,BPO’s, FMCG, Hyper Marts, Knowledge services, Visa Consultancy, Hotels, Hospitals, Banking, Financial services and Insurance. We provide human capital training solutions to our clients. Doing proper need analysis we design the training programs. The HR company hires talent for its clients in corporate roles, HR, finance, sales and marketing.</string>
+    <string name="about_us_para2"><![CDATA[Ideal HR Contrivance provides strategic advice in the areas of executive.search, recruitment process, outsourcing, talent acquisition strategy, compensation advisory, university recruitment, talent branding, outplacement and event management, and SOW-based recruitment.We are engaged in both – Online Trainings & Offline trainings We understand the cultural transformation and change management that can be attained & make it an enriching experience through our training sessions.]]></string>
 </resources>

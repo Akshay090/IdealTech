@@ -13,24 +13,35 @@
         android:orientation="vertical">
 
 
+        <include
+            android:id="@+id/personal_d_filled_included"
+            layout="@layout/personal_details_card_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            />
+
+
         <android.support.v7.widget.CardView
             android:id="@+id/card_view_are_you_student"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
 
-            card_view:cardCornerRadius="4dp"
-            card_view:contentPadding="8dp"
-
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            >
+            android:layout_marginLeft="8dp"
+
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            card_view:cardCornerRadius="4dp"
+            card_view:contentPadding="8dp">
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="102dp">
+                android:layout_height="102dp"
+                android:background="#d3d4d4">
 
                 <ImageView
                     android:id="@+id/student_img"
@@ -46,11 +57,12 @@
                     android:id="@+id/student_txt"
                     android:layout_width="0dp"
                     android:layout_height="49dp"
+                    android:background="#d3d4d4"
                     android:text="Are you a student looking for Internship/Training ?"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    app:layout_constraintStart_toEndOf="@id/student_img"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@+id/student_img"
+                    app:layout_constraintStart_toEndOf="@id/student_img"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
@@ -83,8 +95,8 @@
                     android:id="@+id/Not_Student_btn"
                     android:layout_width="0dp"
                     android:layout_height="42dp"
-                    android:layout_marginTop="4dp"
                     android:layout_gravity="start"
+                    android:layout_marginTop="4dp"
                     android:background="@drawable/register_btn"
                     android:hapticFeedbackEnabled="true"
                     android:text="No"
@@ -92,27 +104,14 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@+id/right_guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/student_txt"
-                    app:layout_constraintStart_toEndOf="@id/right_guideline"/>
-
+                    app:layout_constraintStart_toEndOf="@id/right_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/student_txt" />
 
 
             </android.support.constraint.ConstraintLayout>
 
 
         </android.support.v7.widget.CardView>
-
-
-        <include
-            android:id="@+id/personal_d_filled_included"
-            layout="@layout/personal_details_card_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:visibility="gone"
-            />
-
 
         <android.support.v7.widget.CardView
             android:id="@+id/card_view_personal_d"
@@ -128,7 +127,7 @@
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#fff">
+                android:background="#d3d4d4">
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/personal_d_bar"
@@ -158,8 +157,8 @@
                     android:id="@+id/pd_view"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="#00ffe1"
-                    app:layout_constraintTop_toBottomOf="@+id/personal_d_bar" />
+                    app:layout_constraintTop_toBottomOf="@+id/personal_d_bar"
+                    card_view:background="#0172B1" />
 
 
                 <ImageView
@@ -221,7 +220,7 @@
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#fff">
+                android:background="#d3d4d4">
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/education_d_bar"
@@ -251,8 +250,8 @@
                     android:id="@+id/ed_view"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="#00ffe1"
-                    app:layout_constraintTop_toBottomOf="@+id/education_d_bar" />
+                    app:layout_constraintTop_toBottomOf="@+id/education_d_bar"
+                    card_view:background="#0172B1" />
 
 
                 <ImageView
@@ -314,7 +313,7 @@
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#fff">
+                android:background="#e3e4e4">
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/employment_d_bar"
@@ -344,8 +343,8 @@
                     android:id="@+id/employ_view"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="#00ffe1"
-                    app:layout_constraintTop_toBottomOf="@+id/employment_d_bar" />
+                    app:layout_constraintTop_toBottomOf="@+id/employment_d_bar"
+                    card_view:background="#0#172B1" />
 
 
                 <ImageView

@@ -51,7 +51,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/personal_d_bar"
                 android:background="#0371c0"/>
 
-            <android.support.constraint.ConstraintLayout
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/pd_view"
@@ -63,20 +64,19 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/ic_today_black_24dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:id="@+id/cal_img"/>
+                    android:id="@+id/cal_img"
+                    android:layout_gravity="center_vertical"
+                    />
 
 
                 <TextView
                     android:id="@+id/cal_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
                     android:layout_marginLeft="8dp"
                     android:text="Date of Birth :"
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/cal_img"
-                    app:layout_constraintLeft_toRightOf="@+id/cal_img" />
+                    />
 
                 <TextView
                     android:id="@+id/cal_data"
@@ -84,14 +84,15 @@
                     android:layout_height="wrap_content"
                     android:text="08 Jun, 1998"
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/cal_1"
-                    app:layout_constraintLeft_toRightOf="@+id/cal_1" />
+                    android:layout_gravity="center_vertical"
+                    />
 
 
-            </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
 
 
-            <android.support.constraint.ConstraintLayout
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/cal_layout_parent"
@@ -103,7 +104,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/gender"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_gravity="center_vertical"
                     android:id="@+id/gender_img"/>
 
 
@@ -111,7 +112,7 @@
                     android:id="@+id/gender_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="8dp"
                     android:text="Gender :"
                     android:textSize="17sp"
@@ -124,14 +125,15 @@
                     android:layout_height="wrap_content"
                     android:text="Male"
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/gender_1"
-                    app:layout_constraintLeft_toRightOf="@+id/gender_1" />
+                    android:layout_gravity="center_vertical"
+                    />
 
 
-            </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
 
 
-            <android.support.constraint.ConstraintLayout
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/gender_parent_layout"
@@ -143,7 +145,8 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/ic_location_on_black_24dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_gravity="center_vertical"
+
                     android:id="@+id/loc_img"/>
 
 
@@ -151,31 +154,29 @@
                     android:id="@+id/from_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="8dp"
                     android:text="From "
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/location_parent_layout"
-                    app:layout_constraintLeft_toRightOf="@+id/loc_img" />
+                    />
 
                 <TextView
                     android:id="@+id/from_city_state"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginStart="8dp"
                     android:text="City, State"
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/location_parent_layout"
-                    app:layout_constraintLeft_toRightOf="@+id/from_1"
-                    app:layout_constraintStart_toEndOf="@+id/from_1" />
+                    android:layout_gravity="center_vertical"
+                    />
 
 
-            </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
 
 
-            <android.support.constraint.ConstraintLayout
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/location_parent_layout"
@@ -188,38 +189,38 @@
                     android:layout_height="20dp"
                     android:src="@drawable/compass"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:id="@+id/live_img"/>
+                    android:id="@+id/live_img"
+                    android:layout_gravity="center_vertical"
+                    />
 
 
                 <TextView
                     android:id="@+id/living_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="8dp"
                     android:text="Living in "
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/living_parent_layout"
-                    app:layout_constraintLeft_toRightOf="@+id/live_img" />
+                    />
 
                 <TextView
                     android:id="@+id/Living_city_state"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="8dp"
                     android:layout_marginStart="8dp"
                     android:text="City, State"
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/living_parent_layout"
-                    app:layout_constraintLeft_toRightOf="@+id/living_1"
-                    app:layout_constraintStart_toEndOf="@+id/living_1" />
+                     />
 
 
-            </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
 
 
-            <android.support.constraint.ConstraintLayout
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/living_parent_layout"
@@ -231,7 +232,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/whatsapp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_gravity="center_vertical"
                     android:id="@+id/whatsapp_img"/>
 
 
@@ -239,31 +240,29 @@
                     android:id="@+id/whatsapp_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="8dp"
                     android:text="WhatsApp no is "
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/whatsapp_parent_layout"
-                    app:layout_constraintLeft_toRightOf="@+id/whatsapp_img" />
+                     />
 
                 <TextView
                     android:id="@+id/WhatsApp_no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="8dp"
                     android:layout_marginStart="8dp"
                     android:text="0123456789"
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/whatsapp_parent_layout"
-                    app:layout_constraintLeft_toRightOf="@+id/whatsapp_1"
-                    app:layout_constraintStart_toEndOf="@+id/whatsapp_1" />
+                     />
 
 
-            </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
 
 
-            <android.support.constraint.ConstraintLayout
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/whatsapp_parent_layout"
@@ -275,7 +274,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/ic_g_translate_black_24dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_gravity="center_vertical"
                     android:id="@+id/language_img"/>
 
 
@@ -283,28 +282,25 @@
                     android:id="@+id/language_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="8dp"
                     android:text="Languages known "
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/language_parent_layout"
-                    app:layout_constraintLeft_toRightOf="@+id/language_img" />
+                    />
 
                 <TextView
                     android:id="@+id/Languages_set"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="8dp"
                     android:layout_marginStart="8dp"
                     android:text="English, Hindi"
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/language_parent_layout"
-                    app:layout_constraintLeft_toRightOf="@+id/language_img"
-                    app:layout_constraintStart_toEndOf="@+id/language_1" />
+                     />
 
 
-            </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
 
 
         </android.support.constraint.ConstraintLayout>

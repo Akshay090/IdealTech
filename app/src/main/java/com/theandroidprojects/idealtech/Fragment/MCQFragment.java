@@ -1,14 +1,17 @@
 package com.theandroidprojects.idealtech.Fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -30,6 +33,8 @@ public class MCQFragment extends Fragment {
     private DatabaseReference mcqReference;
     private RecyclerView mcqRecyclerView;
     private FirebaseRecyclerAdapter<mcq, mcqViewHolder> mcqAdapter;
+    SparseBooleanArray sparseBooleanArray; // for identifying: in list which items are selected
+
 
     int Score = 0;
 
@@ -85,10 +90,16 @@ public class MCQFragment extends Fragment {
 
         mcqAdapter = new FirebaseRecyclerAdapter<mcq, mcqViewHolder>(options) {
 
+            private int selectedPos = RecyclerView.NO_POSITION;
 
             @Override
             protected void onBindViewHolder(@NonNull final mcqViewHolder holder,
                                             final int position, @NonNull final mcq model) {
+
+
+                holder.itemView.setSelected(selectedPos == position);
+
+
                 holder.setQuestion(model.getQuestion());
                 holder.setA(model.getA());
                 holder.setB(model.getB());
@@ -97,27 +108,41 @@ public class MCQFragment extends Fragment {
 
 
 
+
                 holder.MCQ_opt_A.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
-                        if(holder.MCQ_opt_A.getBackground() != null){
-                            holder.MCQ_opt_A.setBackground(null);
+                        selectedPos = position;
+
+                        String thePos = String.valueOf(selectedPos);
+
+                        // Below line is just like a safety check, because sometimes holder could be null,
+                        // in that case, getAdapterPosition() will return RecyclerView.NO_POSITION
+                        if (holder.getAdapterPosition() == RecyclerView.NO_POSITION) return;
+
+
+
+                        if(holder.getAdapterPosition() == selectedPos){
+
+                            // RecyclerView.ViewHolder v = mcqRecyclerView.findViewHolderForAdapterPosition(selectedPos);
+                            if(holder.MCQ_opt_A.getBackground() != null){
+                                holder.MCQ_opt_A.setBackground(null);
                             }else {
-                            holder.MCQ_opt_A.setBackgroundResource(R.drawable.custom_mcq_clicked);
+                                holder.MCQ_opt_A.setBackgroundResource(R.drawable.custom_mcq_clicked);
 
-                            if(model.getA().equals(model.getAns())){
-                                Score = Score + 1;
+                                if (model.getA().equals(model.getAns())) {
+                                    Score = Score + 1;
 
 
-                                String Result = String.valueOf(Score);
-                                Toast.makeText(getActivity(), Result,Toast.LENGTH_SHORT).show();
+                                    String Result = String.valueOf(Score);
+                                    Toast.makeText(getActivity(), Result, Toast.LENGTH_SHORT).show();
+                                }
+
                             }
 
-                            holder.MCQ_opt_B.setEnabled(false);
                         }
-
-
+                        Toast.makeText(getActivity(),thePos,Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -126,18 +151,36 @@ public class MCQFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
 
-                        if(holder.MCQ_opt_B.getBackground() != null){
-                            holder.MCQ_opt_B.setBackground(null);
-                        }else {
-                            holder.MCQ_opt_B.setBackgroundResource(R.drawable.custom_mcq_clicked);
+                        selectedPos = position;
 
-                            if(model.getB().equals(model.getAns())){
-                                Score = Score + 1;
+                        String thePos = String.valueOf(selectedPos);
 
-                                String Result = String.valueOf(Score);
-                                Toast.makeText(getActivity(), Result,Toast.LENGTH_SHORT).show();
+                        // Below line is just like a safety check, because sometimes holder could be null,
+                        // in that case, getAdapterPosition() will return RecyclerView.NO_POSITION
+                        if (holder.getAdapterPosition() == RecyclerView.NO_POSITION) return;
+
+
+
+                        if(holder.getAdapterPosition() == selectedPos){
+
+                            // RecyclerView.ViewHolder v = mcqRecyclerView.findViewHolderForAdapterPosition(selectedPos);
+                            if(holder.MCQ_opt_B.getBackground() != null){
+                                holder.MCQ_opt_B.setBackground(null);
+                            }else {
+                                holder.MCQ_opt_B.setBackgroundResource(R.drawable.custom_mcq_clicked);
+
+                                if (model.getB().equals(model.getAns())) {
+                                    Score = Score + 1;
+
+
+                                    String Result = String.valueOf(Score);
+                                    Toast.makeText(getActivity(), Result, Toast.LENGTH_SHORT).show();
+                                }
+
                             }
+
                         }
+                        Toast.makeText(getActivity(),thePos,Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -146,20 +189,36 @@ public class MCQFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
 
-                        if(holder.MCQ_opt_C.getBackground() != null){
-                            holder.MCQ_opt_C.setBackground(null);
-                        }else {
-                            holder.MCQ_opt_C.setBackgroundResource(R.drawable.custom_mcq_clicked);
+                        selectedPos = position;
 
-                            if(model.getC().equals(model.getAns())){
-                                Score = Score + 1;
+                        String thePos = String.valueOf(selectedPos);
+
+                        // Below line is just like a safety check, because sometimes holder could be null,
+                        // in that case, getAdapterPosition() will return RecyclerView.NO_POSITION
+                        if (holder.getAdapterPosition() == RecyclerView.NO_POSITION) return;
 
 
-                                String Result = String.valueOf(Score);
-                                Toast.makeText(getActivity(), Result,Toast.LENGTH_SHORT).show();
+
+                        if(holder.getAdapterPosition() == selectedPos){
+
+                            // RecyclerView.ViewHolder v = mcqRecyclerView.findViewHolderForAdapterPosition(selectedPos);
+                            if(holder.MCQ_opt_C.getBackground() != null){
+                                holder.MCQ_opt_C.setBackground(null);
+                            }else {
+                                holder.MCQ_opt_C.setBackgroundResource(R.drawable.custom_mcq_clicked);
+
+                                if (model.getC().equals(model.getAns())) {
+                                    Score = Score + 1;
+
+
+                                    String Result = String.valueOf(Score);
+                                    Toast.makeText(getActivity(), Result, Toast.LENGTH_SHORT).show();
+                                }
+
                             }
-                        }
 
+                        }
+                        Toast.makeText(getActivity(),thePos,Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -167,21 +226,37 @@ public class MCQFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
 
-                        if(holder.MCQ_opt_D.getBackground() != null){
-                            holder.MCQ_opt_D.setBackground(null);
-                        }else {
-                            holder.MCQ_opt_D.setBackgroundResource(R.drawable.custom_mcq_clicked);
+                            selectedPos = position;
 
-                            if(model.getD().equals(model.getAns())){
-                                Score = Score + 1;
+                            String thePos = String.valueOf(selectedPos);
+
+                        // Below line is just like a safety check, because sometimes holder could be null,
+                        // in that case, getAdapterPosition() will return RecyclerView.NO_POSITION
+                        if (holder.getAdapterPosition() == RecyclerView.NO_POSITION) return;
 
 
-                                String Result = String.valueOf(Score);
-                                Toast.makeText(getActivity(), Result,Toast.LENGTH_SHORT).show();
+
+                        if(holder.getAdapterPosition() == selectedPos){
+
+                           // RecyclerView.ViewHolder v = mcqRecyclerView.findViewHolderForAdapterPosition(selectedPos);
+                            if(holder.MCQ_opt_D.getBackground() != null){
+                                    holder.MCQ_opt_D.setBackground(null);
+                                }else {
+                                    holder.MCQ_opt_D.setBackgroundResource(R.drawable.custom_mcq_clicked);
+
+                                    if (model.getD().equals(model.getAns())) {
+                                        Score = Score + 1;
+
+
+                                        String Result = String.valueOf(Score);
+                                        Toast.makeText(getActivity(), Result, Toast.LENGTH_SHORT).show();
+                                    }
+
+                                }
+
                             }
+                            Toast.makeText(getActivity(),thePos,Toast.LENGTH_SHORT).show();
                         }
-
-                }
                 });
 
 

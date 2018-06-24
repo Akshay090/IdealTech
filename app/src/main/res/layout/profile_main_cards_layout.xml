@@ -72,7 +72,7 @@
                     android:layout_gravity="start"
                     android:layout_marginLeft="1dp"
                     android:layout_marginTop="4dp"
-                    android:background="@drawable/sign_in_btn"
+                    android:background="#0172B1"
                     android:hapticFeedbackEnabled="true"
                     android:text="Yes"
                     android:textColor="@android:color/white"
@@ -97,7 +97,7 @@
                     android:layout_height="42dp"
                     android:layout_gravity="start"
                     android:layout_marginTop="4dp"
-                    android:background="@drawable/register_btn"
+                    android:background="#e0e0e0"
                     android:hapticFeedbackEnabled="true"
                     android:text="No"
                     android:textColor="#3b3a3a"
@@ -133,7 +133,7 @@
                     android:id="@+id/personal_d_bar"
                     android:layout_width="match_parent"
                     android:layout_height="35sp"
-                    android:background="#c7befa"
+                    android:background="#0172B1"
 
                     >
 
@@ -145,6 +145,7 @@
                         android:layout_marginStart="4dp"
                         android:text="Personal Details"
                         android:textStyle="bold"
+                        android:textColor="#fff"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         app:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toTopOf="parent"
@@ -184,7 +185,7 @@
 
                 <Button
                     android:id="@+id/personal_btn"
-                    android:background="@drawable/sign_in_btn"
+                    android:background="#0172B1"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_gravity="center"
@@ -226,8 +227,7 @@
                     android:id="@+id/education_d_bar"
                     android:layout_width="match_parent"
                     android:layout_height="35sp"
-                    android:background="#c7befa"
-
+                    android:background="#0172B1"
                     >
 
                     <TextView
@@ -238,6 +238,7 @@
                         android:layout_marginStart="4dp"
                         android:text="Education Details"
                         android:textStyle="bold"
+                        android:textColor="#fff"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         app:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintBottom_toBottomOf="parent"
@@ -280,7 +281,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/sign_in_btn"
+                    android:background="#0172B1"
                     android:hapticFeedbackEnabled="true"
                     android:text="ADD NOW"
                     android:textColor="@android:color/white"
@@ -319,8 +320,7 @@
                     android:id="@+id/employment_d_bar"
                     android:layout_width="match_parent"
                     android:layout_height="35sp"
-                    android:background="#c7befa"
-
+                    android:background="#0172B1"
                     >
 
                     <TextView
@@ -331,6 +331,7 @@
                         android:layout_marginStart="4dp"
                         android:text="Employment Details"
                         android:textStyle="bold"
+                        android:textColor="#fff"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         app:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toTopOf="parent"
@@ -370,7 +371,7 @@
 
                 <Button
                     android:id="@+id/employment_btn"
-                    android:background="@drawable/sign_in_btn"
+                    android:background="#0172B1"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_gravity="center"

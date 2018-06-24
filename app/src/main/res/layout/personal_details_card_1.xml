@@ -24,8 +24,7 @@
                 android:id="@+id/personal_d_bar"
                 android:layout_width="match_parent"
                 android:layout_height="35sp"
-                android:background="#c7befa"
-
+                android:background="#0172B1"
                 >
 
                 <TextView
@@ -36,6 +35,7 @@
                     android:layout_marginStart="4dp"
                     android:text="Personal Details"
                     android:textStyle="bold"
+                    android:textColor="#fff"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     app:layout_constraintStart_toStartOf="parent"
                     card_view:layout_editor_absoluteY="5dp"
@@ -60,9 +60,9 @@
 
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/calendar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_today_black_24dp"
                     app:layout_constraintStart_toStartOf="parent"
                     android:id="@+id/cal_img"/>
 
@@ -100,8 +100,8 @@
 
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/gender"
                     app:layout_constraintStart_toStartOf="parent"
                     android:id="@+id/gender_img"/>
@@ -140,9 +140,9 @@
 
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/location"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_location_on_black_24dp"
                     app:layout_constraintStart_toStartOf="parent"
                     android:id="@+id/loc_img"/>
 
@@ -184,8 +184,8 @@
 
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/compass"
                     app:layout_constraintStart_toStartOf="parent"
                     android:id="@+id/live_img"/>
@@ -228,8 +228,8 @@
 
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/whatsapp"
                     app:layout_constraintStart_toStartOf="parent"
                     android:id="@+id/whatsapp_img"/>
@@ -272,9 +272,9 @@
 
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/translator"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_g_translate_black_24dp"
                     app:layout_constraintStart_toStartOf="parent"
                     android:id="@+id/language_img"/>
 

@@ -12,13 +12,43 @@ import com.theandroidprojects.idealtech.R;
 
 
 public class mcqViewHolder extends RecyclerView.ViewHolder {
-    public View mView;
 
+    public View mView;
 
     public LinearLayout MCQ_opt_A = (LinearLayout)itemView.findViewById(R.id.mcq_opt_1_ll);
     public LinearLayout MCQ_opt_B = (LinearLayout)itemView.findViewById(R.id.mcq_opt_2_ll);
     public LinearLayout MCQ_opt_C = (LinearLayout)itemView.findViewById(R.id.mcq_opt_3_ll);
     public LinearLayout MCQ_opt_D = (LinearLayout)itemView.findViewById(R.id.mcq_opt_4_ll);
+
+
+    public interface OnRecyclerViewItemClickListener{
+        public void selectedItemCount(int count);
+    }
+
+//    @Override
+//    public void onClick(View view) {
+//
+//        if(view.getId() == R.id.mcq_opt_1_ll ){
+//
+//            if (!sparseBooleanArray.get(getAdapterPosition()))
+//            {
+//                sparseBooleanArray.put(getAdapterPosition(),true);
+//                selectedItemCount++;
+//                listener.selectedItemCount(selectedItemCount); // calling the method
+//                // in main activity Because: in our case mainActivity our created interface for clicklisteners
+//                notifyItemChanged(getAdapterPosition());
+//            }
+//            else // if clicked item is already selected
+//            {
+//                sparseBooleanArray.put(getAdapterPosition(),false);
+//                selectedItemCount--;
+//                listener.selectedItemCount(selectedItemCount); // calling the method in main activity Because: in our case mainActivity our created interface for clicklisteners
+//                notifyItemChanged(getAdapterPosition());
+//            }
+//
+//        }
+//
+//    }
 
     public mcqViewHolder(View itemView) {
         super(itemView);
@@ -49,4 +79,11 @@ public class mcqViewHolder extends RecyclerView.ViewHolder {
         TextView mcq_optionD = (TextView) mView.findViewById(R.id.mcq_opt_4_txt);
         mcq_optionD.setText(d);
     }
+
+
+
+
+
 }
+
+

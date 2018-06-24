@@ -1,11 +1,18 @@
 package com.theandroidprojects.idealtech.Activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -155,8 +162,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Intent intent = new Intent(MainActivity.this,ProfileEditActivity.class);
                         MainActivity.this.startActivity(intent);
-                        overridePendingTransition( R.anim.slide_in_up, R.anim.slide_out_up );
-                        
+
                         return true;
 
                     default:
@@ -169,7 +175,70 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        // set item as selected to persist highlight
+                        menuItem.setChecked(true);
+                        // close drawer when item is tapped
+                        //mDrawerLayout.closeDrawers();
+
+                        // Add code here to update the UI based on the item selected
+                        // For example, swap UI fragments here
+                        //calling the method displayselectedscreen and passing the id of selected menu
+
+
+                        displaySelectedScreen(menuItem.getItemId());
+
+                        //make this method blank
+                        return true;
+                    }
+                });
+
+
+
+
     }
+
+
+    private void displaySelectedScreen(int itemId) {
+
+//        //creating fragment object
+//        Fragment fragment = null;
+
+        //initializing the fragment object which is selected
+        switch (itemId) {
+            case R.id.nav_contact_us:
+                Intent intent = new Intent(MainActivity.this,to_debug.class);
+                MainActivity.this.startActivity(intent);
+                break;
+//            case R.id.nav_menu2:
+//                fragment = new menu_frag_2();
+//                break;
+//            case R.id.nav_menu3:
+//                fragment = new menu_frag_3();
+//                break;
+//            case R.id.nav_menu4:
+//                fragment = new menu_frag_4();
+//                break;
+            default:
+//                fragment = new home();
+                break;
+        }
+
+//        //replacing the fragment
+//        if (fragment != null) {
+//            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//            ft.replace(R.id.Content_frame, fragment);
+//            ft.commit();
+//        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+    }
+
 
 
     private void initializeFragment(){

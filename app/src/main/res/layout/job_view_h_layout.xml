@@ -4,15 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     app:cardElevation="8dp"
     app:cardPreventCornerOverlap="true"
     app:cardCornerRadius="1dp"
-    app:cardBackgroundColor="#ffffff"
+
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
-    android:layout_margin="8dp"
     android:id="@+id/job_view_h_card"
     >
 
@@ -21,87 +21,120 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="0dp">
+       >
 
-        <TextView
-            android:id="@+id/Jobs_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Job Title def"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:background="#e0e0e0"
+           >
+
+           <TextView
+               android:id="@+id/Jobs_title"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Job Title def"
+               android:textSize="25sp"
+               android:textStyle="bold"
+               android:layout_gravity="center_vertical"/>
+
+       </LinearLayout>
+
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#00ffe1"
+             />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="0dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LOCATION :"
-                android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/Job_location"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vadodara def"
-                android:textSize="15sp" />
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOCATION :"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/Job_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vadodara def"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EXPERIENCE : "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/Job_experience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 to 2 Years def"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="POSTED ON : "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/Job_postedOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15/05/2018 def"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="EXPERIENCE : "
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/Job_experience"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0 to 2 Years def"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="POSTED ON : "
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/Job_postedOn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="15/05/2018 def"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp">
 
             <RelativeLayout
 
@@ -113,21 +146,22 @@
                     android:id="@+id/Job_applyNowBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginBottom="-6dp"
+                    android:gravity="center_vertical"
+
                     android:text="APPLY NOW"
                     android:textSize="15sp"
-                    android:theme="@style/PrimaryFlatButton"
-                    android:gravity="center_vertical"
-                    />
+                    android:theme="@style/PrimaryFlatButton" />
 
                 <Button
                     android:id="@+id/Job_shareBtn"
                     android:layout_width="23dp"
                     android:layout_height="22dp"
                     android:layout_alignParentStart="true"
+
                     android:layout_marginBottom="-9dp"
-                    android:layout_marginStart="124dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/share" />
 
@@ -136,15 +170,17 @@
                     android:id="@+id/Job_saveBtn"
                     android:layout_width="26dp"
                     android:layout_height="29dp"
-                    android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
 
                     android:layout_marginEnd="3dp"
                     android:layout_marginTop="13dp"
+
+
                     android:background="@drawable/ic_bookmark_border_black_24dp" />
             </RelativeLayout>
 
         </LinearLayout>
+
 
 
     </LinearLayout>

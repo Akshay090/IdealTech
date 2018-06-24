@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#0172B1</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#2196f3</color>
+    <color name="colorPrimaryDark">#1976d2</color>
     <color name="colorAccent">#FF4081</color>
 
     <!-- Screens background color-->
@@ -41,6 +41,6 @@
     <color name="colorEditTextHint">#767272</color>
     <color name="colorBlack">#000</color>
 
-    <color name="colorForToolBar">#556efc</color>
+    <color name="colorForToolBar">#2196f3</color>
 
 </resources>

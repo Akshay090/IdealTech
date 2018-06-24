@@ -175,6 +175,15 @@ public class ProfileEditActivity extends AppCompatActivity {
         });
 
 
+        ImageView EditPen = findViewById(R.id.editPenInPDFilled);
+        EditPen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                showPersonalForm();
+
+            }
+        });
 
 
         CheckIfUserPersonalDetailsExistInFB();

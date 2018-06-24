@@ -1,4 +1,4 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
@@ -7,375 +7,390 @@
     android:orientation="vertical">
 
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view_are_you_student"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        card_view:cardCornerRadius="4dp"
-        card_view:contentPadding="8dp"
 
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        >
-
-        <android.support.constraint.ConstraintLayout
+        <include
+            android:id="@+id/personal_d_filled_included"
+            layout="@layout/personal_details_card_1"
             android:layout_width="match_parent"
-            android:layout_height="102dp">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            />
 
-            <ImageView
-                android:id="@+id/student_img"
-                android:layout_width="87dp"
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_are_you_student"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            card_view:cardCornerRadius="4dp"
+            card_view:contentPadding="8dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="102dp"
-                android:src="@drawable/graduation"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/student_txt"
-                />
+                android:background="#d3d4d4">
 
-            <TextView
-                android:id="@+id/student_txt"
-                android:layout_width="0dp"
-                android:layout_height="49dp"
-                android:text="Are you a student looking for Internship/Training ?"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                app:layout_constraintStart_toEndOf="@id/student_img"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/student_img"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/Yes_Student_btn"
-                android:layout_width="0dp"
-                android:layout_height="42dp"
-                android:layout_gravity="start"
-                android:layout_marginLeft="1dp"
-                android:layout_marginTop="4dp"
-                android:background="#0172B1"
-                android:hapticFeedbackEnabled="true"
-                android:text="Yes"
-                android:textColor="@android:color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/right_guideline"
-                app:layout_constraintLeft_toRightOf="@+id/student_img"
-                app:layout_constraintStart_toEndOf="@id/student_img"
-                app:layout_constraintTop_toBottomOf="@+id/student_txt" />
-
-
-            <android.support.constraint.Guideline
-                android:id="@+id/right_guideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_end="134dp"
-                app:layout_constraintStart_toEndOf="@id/student_img" />
-
-            <Button
-                android:id="@+id/Not_Student_btn"
-                android:layout_width="0dp"
-                android:layout_height="42dp"
-                android:layout_marginTop="4dp"
-                android:layout_gravity="start"
-                android:background="#e0e0e0"
-                android:hapticFeedbackEnabled="true"
-                android:text="No"
-                android:textColor="#3b3a3a"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/right_guideline"
-                app:layout_constraintTop_toBottomOf="@+id/student_txt"
-                app:layout_constraintStart_toEndOf="@id/right_guideline"/>
-
-
-
-        </android.support.constraint.ConstraintLayout>
-
-
-    </android.support.v7.widget.CardView>
-
-
-    <include
-        android:id="@+id/personal_d_filled_included"
-        layout="@layout/personal_details_card_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:visibility="gone"
-        />
-
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view_personal_d"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        card_view:cardCornerRadius="4dp"
-        card_view:contentPadding="10dp"
-        android:elevation="8dp"
-        >
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#fff">
-
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/personal_d_bar"
-                android:layout_width="match_parent"
-                android:layout_height="35sp"
-                android:background="#e0e0e0"
-
-                >
+                <ImageView
+                    android:id="@+id/student_img"
+                    android:layout_width="87dp"
+                    android:layout_height="88dp"
+                    android:src="@drawable/graduation"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
 
                 <TextView
+                    android:id="@+id/student_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:background="#d3d4d4"
+                    android:text="Are you a student looking for Internship/Training ?"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/student_img"
+                    app:layout_constraintStart_toEndOf="@id/student_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/Yes_Student_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/sign_in_btn"
+                    android:hapticFeedbackEnabled="true"
+                    android:text="Yes"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintLeft_toRightOf="@+id/student_img"
+                    app:layout_constraintStart_toEndOf="@id/student_img"
+                    app:layout_constraintTop_toBottomOf="@+id/student_txt" />
+
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/right_guideline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginStart="4dp"
-                    android:text="Personal Details"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    app:layout_constraintStart_toStartOf="parent"
-                    card_view:layout_constraintTop_toTopOf="parent"
-                    card_view:layout_constraintBottom_toBottomOf="parent" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="134dp"
+                    app:layout_constraintStart_toEndOf="@id/student_img" />
+
+                <Button
+                    android:id="@+id/Not_Student_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/register_btn"
+                    android:hapticFeedbackEnabled="true"
+                    android:text="No"
+                    android:textColor="#3b3a3a"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/right_guideline"
+                    app:layout_constraintStart_toEndOf="@id/right_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/student_txt" />
+
 
             </android.support.constraint.ConstraintLayout>
 
-            <View
-                android:id="@+id/pd_view"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#00ffe1"
-                app:layout_constraintTop_toBottomOf="@+id/personal_d_bar" />
 
+        </android.support.v7.widget.CardView>
 
-            <ImageView
-                android:layout_margin="4dp"
-                android:id="@+id/pd_img"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:src="@drawable/chatting"
-                app:layout_constraintTop_toBottomOf="@+id/pd_view"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:layout_margin="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Please add your personal details"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pd_img"
-                android:id="@+id/pd_txt"/>
-
-            <Button
-                android:id="@+id/personal_btn"
-                android:background="#0172B1"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_gravity="center"
-                android:hapticFeedbackEnabled="true"
-                android:text="ADD NOW"
-                android:textColor="@android:color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pd_txt"/>
-
-
-        </android.support.constraint.ConstraintLayout>
-
-
-    </android.support.v7.widget.CardView>
-
-
-
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-
-        android:layout_margin="8dp"
-
-        card_view:cardCornerRadius="4dp"
-        card_view:contentPadding="10dp"
-        android:elevation="8dp"
-        >
-
-        <android.support.constraint.ConstraintLayout
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_personal_d"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff">
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            card_view:cardCornerRadius="4dp"
+            card_view:contentPadding="10dp"
+            android:elevation="8dp"
+            >
 
             <android.support.constraint.ConstraintLayout
-                android:id="@+id/education_d_bar"
                 android:layout_width="match_parent"
-                android:layout_height="35sp"
-                android:background="#e0e0e0"
+                android:layout_height="wrap_content"
+                android:background="#d3d4d4">
 
-                >
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/personal_d_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:background="#c7befa"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginStart="4dp"
+                        android:text="Personal Details"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent"
+                        card_view:layout_constraintBottom_toBottomOf="parent" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/pd_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    app:layout_constraintTop_toBottomOf="@+id/personal_d_bar"
+                    card_view:background="#0172B1" />
+
+
+                <ImageView
+                    android:layout_margin="4dp"
+                    android:id="@+id/pd_img"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/chatting"
+                    app:layout_constraintTop_toBottomOf="@+id/pd_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
+                    android:layout_margin="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginStart="4dp"
-                    android:text="Education Details"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:text="Please add your personal details"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    card_view:layout_constraintTop_toTopOf="parent"
-                    card_view:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintTop_toBottomOf="@+id/pd_img"
+                    android:id="@+id/pd_txt"/>
+
+                <Button
+                    android:id="@+id/personal_btn"
+                    android:background="@drawable/sign_in_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:hapticFeedbackEnabled="true"
+                    android:text="ADD NOW"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pd_txt"/>
+
 
             </android.support.constraint.ConstraintLayout>
 
-            <View
-                android:id="@+id/ed_view"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#00ffe1"
-                app:layout_constraintTop_toBottomOf="@+id/education_d_bar" />
 
-
-            <ImageView
-                android:layout_margin="4dp"
-                android:id="@+id/ed_img"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:src="@drawable/school"
-                app:layout_constraintTop_toBottomOf="@+id/ed_view"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:layout_margin="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Please add your education details"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ed_img"
-                android:id="@+id/edu_txt"/>
-
-            <Button
-                android:id="@+id/education_btn"
-                android:background="#0172B1"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_gravity="center"
-                android:hapticFeedbackEnabled="true"
-                android:text="ADD NOW"
-                android:textColor="@android:color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edu_txt"/>
-
-
-        </android.support.constraint.ConstraintLayout>
-
-
-    </android.support.v7.widget.CardView>
-
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view_employment_d"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-
-        android:layout_margin="8dp"
-
-        card_view:cardCornerRadius="4dp"
-        card_view:contentPadding="10dp"
-        android:elevation="8dp"
-        >
+        </android.support.v7.widget.CardView>
 
 
 
-        <android.support.constraint.ConstraintLayout
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff">
+            android:layout_gravity="center"
+
+            android:layout_margin="8dp"
+
+            card_view:cardCornerRadius="4dp"
+            card_view:contentPadding="10dp"
+            android:elevation="8dp"
+            >
 
             <android.support.constraint.ConstraintLayout
-                android:id="@+id/employment_d_bar"
                 android:layout_width="match_parent"
-                android:layout_height="35sp"
-                android:background="#e0e0e0"
-                >
+                android:layout_height="wrap_content"
+                android:background="#d3d4d4">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/education_d_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:background="#c7befa"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginStart="4dp"
+                        android:text="Education Details"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/ed_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    app:layout_constraintTop_toBottomOf="@+id/education_d_bar"
+                    card_view:background="#0172B1" />
+
+
+                <ImageView
+                    android:id="@+id/ed_img"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="4dp"
+                    android:src="@drawable/school"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ed_view" />
 
                 <TextView
+                    android:id="@+id/edu_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginStart="4dp"
-                    android:text="Employment Details"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:layout_margin="4dp"
+                    android:text="Please add your education details"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    card_view:layout_constraintTop_toTopOf="parent"
-                    card_view:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintTop_toBottomOf="@+id/ed_img" />
+
+                <Button
+                    android:id="@+id/education_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/sign_in_btn"
+                    android:hapticFeedbackEnabled="true"
+                    android:text="ADD NOW"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edu_txt" />
+
 
             </android.support.constraint.ConstraintLayout>
 
-            <View
-                android:id="@+id/employ_view"
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_employment_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_margin="8dp"
+
+            card_view:cardCornerRadius="4dp"
+            card_view:contentPadding="10dp"
+            android:elevation="8dp"
+            >
+
+
+
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#00ffe1"
-                app:layout_constraintTop_toBottomOf="@+id/employment_d_bar" />
-
-
-            <ImageView
-                android:layout_margin="4dp"
-                android:id="@+id/employ_img"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:src="@drawable/building"
-                app:layout_constraintTop_toBottomOf="@+id/employ_view"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:layout_margin="4dp"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Please add your employment details"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/employ_img"
-                android:id="@+id/employ_txt"/>
+                android:background="#e3e4e4">
 
-            <Button
-                android:id="@+id/employment_btn"
-                android:background="#0172B1"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_gravity="center"
-                android:hapticFeedbackEnabled="true"
-                android:text="ADD NOW"
-                android:textColor="@android:color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/employ_txt"/>
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/employment_d_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:background="#c7befa"
 
+                    >
 
-        </android.support.constraint.ConstraintLayout>
-
-
-    </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginStart="4dp"
+                        android:text="Employment Details"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent"
+                        card_view:layout_constraintBottom_toBottomOf="parent"/>
 
 
+                </android.support.constraint.ConstraintLayout>
 
-</LinearLayout>
+                <View
+                    android:id="@+id/employ_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    app:layout_constraintTop_toBottomOf="@+id/employment_d_bar"
+                    card_view:background="#0#172B1" />
+
+
+                <ImageView
+                    android:layout_margin="4dp"
+                    android:id="@+id/employ_img"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/building"
+                    app:layout_constraintTop_toBottomOf="@+id/employ_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please add your employment details"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/employ_img"
+                    android:id="@+id/employ_txt"/>
+
+                <Button
+                    android:id="@+id/employment_btn"
+                    android:background="@drawable/sign_in_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:hapticFeedbackEnabled="true"
+                    android:text="ADD NOW"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/employ_txt"/>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>

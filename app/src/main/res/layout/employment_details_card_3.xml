@@ -9,13 +9,13 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#d6f9f5">
+        android:background="#d3d4d4">
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/employment_d_bar"
             android:layout_width="match_parent"
             android:layout_height="35sp"
-            android:background="#c6ecbc">
+            android:background="#0172B1">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -24,6 +24,7 @@
                 android:layout_marginLeft="4dp"
                 android:layout_marginStart="4dp"
                 android:text="Employment Details"
+                android:textColor="#fff"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 app:layout_constraintStart_toStartOf="parent"
                 card_view:layout_editor_absoluteY="5dp"
@@ -37,7 +38,7 @@
                 android:layout_marginEnd="4dp"
                 android:layout_marginRight="4dp"
                 android:src="@drawable/edit_pen"
-                android:tint="#00ff00"
+                android:tint="#fff"
                 app:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_editor_absoluteY="5dp"
                 card_view:ignore="MissingConstraints" />

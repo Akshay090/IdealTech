@@ -34,10 +34,23 @@
                     android:layout_marginLeft="4dp"
                     android:layout_marginStart="4dp"
                     android:text="Personal Details"
-                    android:textStyle="bold"
+
                     android:textColor="#fff"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     app:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_editor_absoluteY="5dp"
+                    card_view:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="5dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/edit_pen"
+                    android:tint="#fff"
+                    app:layout_constraintEnd_toEndOf="parent"
                     card_view:layout_editor_absoluteY="5dp"
                     card_view:ignore="MissingConstraints" />
 
